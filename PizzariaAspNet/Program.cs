@@ -5,10 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PizzariaContext")));
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+void ConfigureServices(WebApplicationBuilder builder)
+{
+    builder.Services.AddDbContext<AppDbContext>();
+}
 
-var app = builder.Build();
+    var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
