@@ -11,7 +11,7 @@ using PizzariaAspNet.Data;
 namespace PizzariaAspNet.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250318225118_CriandoBanco")]
+    [Migration("20250319002508_CriandoBanco")]
     partial class CriandoBanco
     {
         /// <inheritdoc />
@@ -40,12 +40,12 @@ namespace PizzariaAspNet.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<string>("Sabor")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

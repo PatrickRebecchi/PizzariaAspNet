@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PizzariaAspNet.Pages
+namespace PizzariaAspNet.Pages.Pizza
 {
     public class IndexModel : PageModel
     {

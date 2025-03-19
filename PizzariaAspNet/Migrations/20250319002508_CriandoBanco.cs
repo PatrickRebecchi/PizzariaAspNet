@@ -19,7 +19,7 @@ namespace PizzariaAspNet.Migrations
                     Sabor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Capa = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Preco = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Valor = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
